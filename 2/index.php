@@ -13,7 +13,7 @@ if (!isset($_SESSION['user']) && $_SERVER['REQUEST_METHOD'] != 'POST') {
     exit;
 }
 
-$conn = mysqli_connect("localhost", "root", "48gozld$13", "test");
+$conn = mysqli_connect("localhost", "root", "", "test");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_POST['id'];
