@@ -58,7 +58,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button class="myform-btn" type="submit">가입하기</button>
           </div>
         </form>
-
         <div class="myform-button">
           <a href="beforelogin.php"><button class="myform-btn">로그인으로</button></a>
         </div>
