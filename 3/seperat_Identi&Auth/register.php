@@ -4,7 +4,7 @@ if (!$conn) echo "DB 연결 실패";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_POST['id'];
-    $pass = md5($_POST['pass']);
+    $pass = $_POST['pass'];
     
     
     $score = $_POST['score'];
