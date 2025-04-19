@@ -8,7 +8,7 @@ if (isset($_GET['logout'])) {
     exit;
 }
 
-$conn = mysqli_connect("localhost", "root", "48gozld$13", "test");
+$conn = mysqli_connect("localhost", "root", "", "test");
 
 if (!isset($_SESSION['ttid'])) {
     header("Location: beforelogin.php");
