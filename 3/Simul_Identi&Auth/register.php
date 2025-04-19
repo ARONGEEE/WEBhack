@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "48gozld$13", "test");
+$conn = mysqli_connect("localhost", "root", "", "test");
 if (!$conn) echo "DB 연결 실패";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
