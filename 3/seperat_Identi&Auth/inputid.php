@@ -1,5 +1,6 @@
 <?php
 session_start();
+$conn = mysqli_connect("localhost", "root", "", "test");
 
 if (isset($_GET['logout'])) {
     session_unset();
@@ -8,24 +9,18 @@ if (isset($_GET['logout'])) {
     exit;
 }
 
-$conn = mysqli_connect("localhost", "root", "", "test");
-
-if (!isset($_SESSION['ttid'])) {
+if (!isset($_SESSION['id'])) {
     header("Location: beforelogin.php");
     exit;
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $id = $_SESSION['ttid'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pass = $_POST['pass'];
 
-    $sql = "SELECT * FROM `1111` WHERE id='$id' AND pass='$pass'";
-    $result = mysqli_query($conn, $sql);
-
-    if (mysqli_num_rows($result) == 1) {
-        $user = mysqli_fetch_assoc($result);
+    $result = mysqli_query($conn, "SELECT * FROM `1111` WHERE id='{$_SESSION['id']}'");
+    $user= mysqli_fetch_assoc($result);
+    if ($user['pass'] === $pass) {
         $_SESSION['user'] = $user;
-        unset($_SESSION['ttid']); // 임시 아이디 제거
         header("Location: index.php");
         exit;
     } else {
@@ -53,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 
     <div class="form-input">
-      <h2>'<?= $_SESSION['ttid'] ?>'으로 로그인</h2>
+      <h2>'<?= $_SESSION['id'] ?>'으로 로그인</h2>
       <form method="post" action="inputid.php">
         <div class="form-group">
           <input type="password" name="pass" required>

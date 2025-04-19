@@ -3,11 +3,11 @@ session_start();
 $conn = mysqli_connect("localhost", "root", "", "test");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $id = $_POST['id'];
+    $id = mysqli_real_escape_string($conn, $_POST['id']);
 
-    $check = mysqli_query($conn, "SELECT * FROM `1111` WHERE id='$id'");
-    if (mysqli_num_rows($check) == 1) {
-        $_SESSION['ttid'] = $id;
+    $result = mysqli_query($conn, "SELECT * FROM `1111` WHERE id='$id'");
+    $_SESSION['id'] = mysqli_fetch_assoc($result)['id'];
+    if ($_SESSION['id']) {
         header("Location: inputid.php");
         exit;
     } else {
