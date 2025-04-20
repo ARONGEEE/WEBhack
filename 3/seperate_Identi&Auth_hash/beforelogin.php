@@ -6,8 +6,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = mysqli_real_escape_string($conn, $_POST['id']);
 
     $result = mysqli_query($conn, "SELECT * FROM `1111` WHERE id='$id'");
-    $_SESSION['id'] = mysqli_fetch_assoc($result)['id'];
-    if ($_SESSION['id']) {
+    $tempid= mysqli_fetch_assoc($result)['id'];
+    if ($tempid) {
+        $_SESSION['id']=$tempid;
         header("Location: inputid.php");
         exit;
     } else {
