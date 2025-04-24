@@ -1,0 +1,20 @@
+3 + 아래내용
+
+게시판 구현 : 
+게시판 글 작성 : insert 
+게시판 글 리스트보기 : select (화면에 제목,이름 뿌려주면끝?)
+게시판 글 내용읽기 : select (3번글을 클릭했다? -> 3번글을 가져와서 화면에 띄워주기)
+게시판 글 수정 : update : 마이페이지(정보수정)
+게시판 글 삭제 : delete 
+
+** 게시판 페이징기능**
+select * from board limit 0,10
+limit [index], [count] 0번째부터 10개까지 첫번째페이지!
+
+**게시글 검색기능**
+게시글 제목 검색. (그 키워드 포함 제목) "like" / %는 그방향쪽은 아무거나~
+select * from board where title like '%test%'
+
+
+**게시글 정렬
+select * from board order by [column 이름] , [asc/desc]
