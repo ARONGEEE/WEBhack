@@ -27,7 +27,6 @@ try {
   <link rel="stylesheet" href="login.css">
 
 <body>
-    <!-- 상단 메뉴 (가운데 정렬) -->
     <div style="display: flex; justify-content: center; gap: 10px; padding: 20px 0;">
     <a href="index.php?token=<?= $_GET['token'] ?>" class="myform-btn">홈</a>
     <a href="mypage.php?token=<?= $_GET['token'] ?>" class="myform-btn">마이페이지</a>
