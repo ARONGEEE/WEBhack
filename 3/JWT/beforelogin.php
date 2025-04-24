@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($tempid) {
         $payload = [
           'id' => $tempid,
-          'exp' => time() + 600 // 5분간 유효한 임시 토큰
+          'exp' => time() + 600 // 짧은시간
         ];
         $jwt = JWT::encode($payload, $key, 'HS256');
 
