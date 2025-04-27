@@ -83,13 +83,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <form method="post">
           <!-- 제목 입력(원래 내용에서)-->
           <div class="form-group">
-            <input type="text" name="title" value="<?= htmlspecialchars($post['title']) ?>" required>
+            <input type="text" name="title" value="<?= $post['title'] ?>" required>
             <label>제목</label>
           </div>
 
           <!-- 내용 입력 필드(원래 내용에서)-->
           <div class="form-group">
-            <textarea name="content" required><?= htmlspecialchars($post['content']) ?></textarea>
+            <textarea name="content" required><?= $post['content'] ?></textarea>
             <label>내용</label>
           </div>
 

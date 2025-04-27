@@ -39,7 +39,7 @@ if (!$post) { // 게시글이 존재하지 않을 경우(갑자기 중간에 삭
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title><?= htmlspecialchars($post['title']) ?> - 글 보기</title>
+  <title><?= $post['title'] ?> - 글 보기</title>
   <link rel="stylesheet" href="login.css">
 </head>
 <body>
@@ -56,17 +56,17 @@ if (!$post) { // 게시글이 존재하지 않을 경우(갑자기 중간에 삭
     <div class="post-box">
       
       <!-- 글 제목 -->
-      <h2><?= htmlspecialchars($post['title']) ?></h2>
+      <h2><?= $post['title'] ?></h2>
 
       <!-- 작성자, 작성일 -->
       <div class="meta">
-        작성자: <?= htmlspecialchars($post['writer']) ?> |
+        작성자: <?= $post['writer'] ?> |
         작성일: <?= $post['created_at'] ?>
       </div>
 
       <!-- 글 내용 -->
       <div class="content">
-        <?= nl2br(htmlspecialchars($post['content'])) ?>
+        <?= $post['content'] ?>
       </div>
 
       <!-- 본인 글인 경우에만 수정/삭제 버튼 출력 -->
