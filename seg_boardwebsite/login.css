@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+* {
+    margin:0;
+    padding:0
+}
+
+a,a:hover{
+  text-decoration: none;
+}
+
+.myform-area{
+  overflow: hidden;
+  padding: 60px 0;
+  background: #f4fffe;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.myform-area .form-area{
+  position: relative;
+  background: rgba(103,58,183,0.7);
+  width: 50%;
+  height: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 0 0 40px 0 #e1e1e1;
+}
+
+.myform-area .form-area .form-content,
+.myform-area .form-area .form-input{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.myform-area .form-area .form-content{
+  width: 50%;
+  padding: 40px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+  
+.myform-area .form-area {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.myform-area .form-area .form-content h2{
+  color: #fff;
+}
+
+.myform-area .form-area .form-content p{
+  color: #fff;
+}
+
+.myform-area .form-area .form-content ul{
+  margin-top: 50px;
+}
+
+.myform-area .form-area .form-content ul li{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.myform-area .form-area .form-content a i{
+    margin-right: 10px;
+}
+
+.myform-area .form-area .form-content .facebook{
+  display: block;
+  padding: 10px 20px;
+  background: #3B579D;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 4px;
+  border: 1px solid #3B579D;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.myform-area .form-area .form-content .facebook:hover,
+.myform-area .form-area .form-content .facebook:focus{
+    background: transparent;
+}
+
+.myform-area .form-area .form-content .twitter{
+  display: block;
+  padding: 10px 20px;
+  background: #00ACED;
+  color: #fff;
+  font-size: 15px;
+  text-transform: capitalize;
+  border-radius: 4px;
+  border: 1px solid #00ACED;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.myform-area .form-area .form-content .twitter:hover,
+.myform-area .form-area .form-content .twitter:focus{
+    background: transparent;
+}
+
+.myform-area .form-area .form-input{
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 40px 0 #e1e1e1;
+  width: 50%;
+  background: #fff;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.myform-area .form-area .form-input h2{
+  margin-bottom: 20px;
+  color: #07315B;
+}
+
+.myform-area .form-area .form-input input{
+    position: relative;
+    height: 60px;
+    padding: 20px 0;
+}
+
+.myform-area .form-area .form-input textarea{
+    height: 120px;
+    padding: 20px 0;
+}
+
+.myform-area .form-area .form-input input,
+.myform-area .form-area .form-input textarea{
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #e1e1e1;
+    color: #07315B;
+}
+
+.myform-area .form-area .form-input form .form-group{
+    position: relative;
+}
+
+.myform-area .form-area .form-input form .form-group label{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    pointer-events: none;
+    font-size: 14px;
+    color: #595959;
+    margin-bottom: 0;
+    transition: all .6s;
+}
+
+.myform-area .form-area .form-input input:focus ~ label,
+.myform-area .form-area .form-input textarea:focus ~ label,
+.myform-area .form-area .form-input input:valid ~ label,
+.myform-area .form-area .form-input textarea:valid ~ label{
+    top: -5px;
+    opacity: 0;
+    left: 0;
+    color: rgba(103,58,183);
+    font-size: 12px;
+    color: #07315B;
+    font-weight: bold;
+}
+
+.myform-area .form-area .form-input input:focus,
+.myform-area .form-area .form-input textarea:focus,
+.myform-area .form-area .form-input input:valid,
+.myform-area .form-area .form-input textarea:valid{
+    border-bottom: 2px solid rgba(103,58,183);
+}
+
+.myform-area .form-area .form-text{
+    margin-top: 30px;
+}
+
+.myform-area .form-area .form-text span a{
+    color: rgba(103,58,183);
+}
+
+.myform-area .form-area .myform-button{
+    margin-top: 30px;
+}
+
+.myform-area .form-area .myform-button .myform-btn{
+    width: 100%;
+    height: 50px;
+    font-size: 17px;
+    background: rgba(103,58,183);
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.myform-area .form-area .myform-button .myform-btn:hover{
+    background: #07315B;
+}
+
+/* 상단 탭 버튼 스타일 */
+.myform-btn {
+  background: rgb(227, 95, 253);
+  color: #0e0d0d;
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s ease;
+  display: inline-block;
+  min-width: 100px;
+}
+
+.myform-btn:hover {
+  background: #fffb04;
+}
+
+/* 게시글 보기 박스 스타일 */
+.post-box {
+  width: 80%;
+  margin: 30px auto;
+  padding: 30px;
+  background: rgb(217, 197, 253);
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.post-box h2 {
+  color: #07315B;
+  margin-bottom: 10px;
+}
+
+.post-box .meta {
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.post-box .content {
+  font-size: 16px;
+  color: #333;
+  white-space: pre-wrap;
+}
+
+/* 작은 버튼 스타일 */
+.btn-small-red {
+  display: inline-block;
+  background: rgb(2, 2, 2);
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s ease;
+  min-width: auto;
+  width: fit-content;
+}
+
+.btn-right {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1px;
+}
+
+/* 게시판 테이블 스타일 */
+table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background: rgba(103, 58, 183);
+  color: white;
+}
+
+td a {
+  color: #07315B;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+/* 페이지네이션 */
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: #07315B;
+}
+
+.pagination a.current {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* 검색 박스 */
+.search-box {
+  width: 50%;
+  margin: 20px auto;
+}
+
+.search-box .search-top {
+  margin-bottom: 8px;
+}
+
+.search-box .search-bottom {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.search-box input[type="text"] {
+  width: 50%;
+  padding: 8px 12px;
+  border: none;
+  border-bottom: 2px solid purple;
+  outline: none;
+}
+
+/* ===== 게시판 추가 스타일 ===== */
+
+/* 게시글 작성/수정 페이지 스타일 */
+.form-group textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+/* 파일 업로드 영역 */
+.file-upload {
+    margin: 20px 0;
+}
+
+.file-upload label {
+    display: block;
+    margin-bottom: 10px;
+    color: #07315B;
+    font-weight: bold;
+}
+
+.file-upload input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    background: #f9f9f9;
+}
+
+.file-upload small {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+    font-size: 12px;
+}
+
+/* 파일 정보 표시 영역 */
+.file-info {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.file-info.active {
+    display: flex;
+}
+
+.file-info span {
+    color: #333;
+}
+
+/* 삭제 버튼 스타일 */
+.delete-file,
+.delete-existing {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background 0.3s;
+}
+
+.delete-file:hover,
+.delete-existing:hover {
+    background: #c82333;
+}
+
+/* 기존 파일 표시 영역 */
+.existing-file {
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* 게시판 목록 페이지 추가 스타일 */
+
+/* 파일 아이콘 스타일 */
+.file-icon {
+    display: inline-block;
+    margin-left: 5px;
+    color: #673ab7;
+    font-size: 14px;
+}
+
+/* 테이블 첫 번째 열(제목) 너비 조정 */
+table th:first-child,
+table td:first-child {
+    width: 60%;
+}
+
+/* 제목 링크와 아이콘을 한 줄에 표시 */
+.title-with-file {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.title-with-file a {
+    flex: 0 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
